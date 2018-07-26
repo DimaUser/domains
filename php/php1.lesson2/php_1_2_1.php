@@ -3,6 +3,12 @@
 <h3>
     Логические функции "И" "ИЛИ" "Исключающее ИЛИ"
 </h3>
+<?php
+function andand($x, $y)
+{
+    return $x && $y;
+}
+?>
     <table border="1">
         <caption>Таблица истинности функции И</caption>
         <tr>
@@ -14,28 +20,34 @@
         <tr><td>0</td><td>0</td>
             <td>
                 <?php
-                echo (int)(false && false);
+                echo (int)andand(false, false);
                 ?>
             </td></tr>
         <tr><td>0</td><td>1</td>
             <td>
                 <?php
-                echo (int)(false && true);
+                echo (int)andand(false, true);
                 ?>
             </td></tr>
         <tr><td>1</td><td>0</td>
             <td>
                 <?php
-                echo (int)(true && false);
+                echo (int)andand(true, false);
                 ?>
             </td></tr>
         <tr><td>1</td><td>1</td>
             <td>
                 <?php
-                echo (int)(true && true);
+                echo (int)andand(true, true);
                 ?>
             </td></tr>
     </table>
+<?php
+function oror($x, $y)
+{
+    return $x || $y;
+}
+?>
 <table border="1">
     <caption>Таблица истинности функции ИЛИ</caption>
     <tr>
@@ -47,28 +59,34 @@
     <tr><td>0</td><td>0</td>
         <td>
             <?php
-            echo (int)(false || false);
+            echo (int)oror(false, false);
             ?>
         </td></tr>
     <tr><td>0</td><td>1</td>
         <td>
             <?php
-            echo (int)(false || true);
+            echo (int)oror(false, true);
             ?>
         </td></tr>
     <tr><td>1</td><td>0</td>
         <td>
             <?php
-            echo (int)(true || false);
+            echo (int)oror(true, false);
             ?>
         </td></tr>
     <tr><td>1</td><td>1</td>
         <td>
             <?php
-            echo (int)(true || true);
+            echo (int)oror(true, true);
             ?>
         </td></tr>
   </table>
+<?php
+function xorxor($x, $y)
+{
+    return $x XOR $y;
+}
+?>
 <table border="1">
     <caption>Таблица истинности функции Исключающее ИЛИ</caption>
     <tr>
@@ -80,25 +98,25 @@
     <tr><td>0</td><td>0</td>
         <td>
             <?php
-            echo (int)(false XOR false);
+            echo (int)xorxor(false, false);
             ?>
         </td></tr>
     <tr><td>0</td><td>1</td>
         <td>
             <?php
-            echo (int)(false XOR true);
+            echo (int)xorxor(false, true);
             ?>
         </td></tr>
     <tr><td>1</td><td>0</td>
         <td>
             <?php
-            echo (int)(true XOR false);
+            echo (int)xorxor(true, false);
             ?>
         </td></tr>
     <tr><td>1</td><td>1</td>
         <td>
             <?php
-            echo (int)(true XOR true);
+            echo (int)xorxor(true, true);
             ?>
         </td></tr>
 </table>
