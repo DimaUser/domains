@@ -58,10 +58,10 @@ assert(100 == diskriminant(3, 6, -9));//Значение неверно, выд�
 <?php
 $d =  diskriminant($a, $b, $c);
 if ($d > 0) {
-    echo 'X1 = ' . $x = (-$b + $d ** 0.5) / (2 * $a);
+    echo 'X1 = ' . $x = (-$b + sqrt($d) ) / (2 * $a);
     ?><br><?php
-    echo 'X2 = ' . $x = (-$b - $d ** 0.5) / (2 * $a);
-} elseif ($d = 0) {
+    echo 'X2 = ' . $x = (-$b - sqrt($d) ) / (2 * $a);
+} elseif ($d == 0) {
     echo 'X1 = ' . $x = -$b / (2 * $a);
 } else {
     echo 'корней нет';
