@@ -17,3 +17,4 @@ localhost/.htaccess
 *.png
 php/train.local/images/uploaded.jpg
 *.xml
+*.JPG
